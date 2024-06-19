@@ -25,11 +25,23 @@
         </h2>
         <button>Cadastrar entidade</button>
         <button class="second-btn">Ver entidades cadastradas</button>
-        <footer class="links">
+        <div class="links">
           <p>Sua entidade não se enquadra nos campos de atuação disponíveis?</p>
           <a href="">Registrar novo campo de atuação</a>
-        </footer>
+        </div>
+        <span id="image"></span>
       </main>
     </div>
+    <script>
+      const URL = "https://dummyjson.com/products";
+
+      async function callApi() {
+        const response = await fetch(URL);
+        const obj = await response.json();
+        console.log(obj);
+      }
+
+      callApi();
+    </script>
   </body>
 </html>
